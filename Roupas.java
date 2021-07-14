@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Roupas extends Doacoes{
 	
+	  //Atributos\\
 	private int agasalho;
 	private int camiseta;
 	private int calca;
@@ -11,9 +12,9 @@ public class Roupas extends Doacoes{
 	private int cuecas;
 	private int calcinha;
 	private int meia;
-	
 	Scanner leia = new Scanner(System.in);
 	
+	//Construtor\\
 	public Roupas(String nome, String endereco, int idade,int agasalho,int camiseta,int calca,int tenis,int cuecas,int calcinha,int meia) {
 	
 	super(nome,endereco,idade);
@@ -23,8 +24,9 @@ public class Roupas extends Doacoes{
 	this.tenis = tenis;
 	this.cuecas = cuecas;
 	this.calcinha = calcinha;
+	this.meia = meia;
 }
-
+	//Metodos\\
 	public int getAgasalho() {
 		return agasalho;
 	}
@@ -68,17 +70,14 @@ public class Roupas extends Doacoes{
 		this.meia = meia;
 	}
 	
-	public void imprimirInfo() {
+	public void imprimirInfo() {//Será impresso as informações do Doador
 		System.out.println("*************Recebimento do Doador**************");
 		System.out.println("Nome do Doador:"+getNome()+"\n"+"Endereco:"+getEndereco()+"\n"+"Idade do Doador:"+getIdade()+
 				"\n"+"Agasalhos:"+agasalho+"\n"+"Camisetas:"+camiseta+"\n"+"Calças:"+calca+"\n"+"Tenis:"+tenis+
 				"\n"+"Cuecas:"+cuecas+"\n"+"Calcinhas:"+calcinha+"\n"+"Meias:"+meia);
 	}
-	/*public void calcularDoacoes() {
-		for(x=0;x<5;x++) {	
-		int roupasTotal = agasalho+camiseta+calca+tenis+cuecas+calcinha+meia;
-		roupasTotal = roupasTotal + media;
-		System.out.println("\nTotal de Roupas Recebidas:"+roupasTotal);
-	}*/
-	
+	@Override
+	public void intensDefeituosos() {//Metodo Polimorfismo
+		System.out.println("Não aceitamos itens defeituosos e estragados, Presta Atenção!!!!");
+	}
 }

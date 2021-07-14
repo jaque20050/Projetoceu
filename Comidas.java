@@ -2,6 +2,7 @@ package ProjetoCeu;
 
 public class Comidas extends Doacoes{
 	
+	 //Atributos\\
 	private int arroz;
 	private int feijao;
 	private int oleo;
@@ -10,9 +11,10 @@ public class Comidas extends Doacoes{
 	private int sal;
 	private int acucar;
 	
+	//Construtor\\
 	public Comidas(String nome,String endereco, int idade,int arroz, int feijao, int oleo, int farinha, int leite, int sal, int acucar) {
 		
-		super(nome,endereco,idade);
+		super(nome,endereco,idade);//Atribuindo parametros
 		this.arroz = arroz;
 		this.feijao = feijao;
 		this.oleo = oleo;
@@ -21,6 +23,7 @@ public class Comidas extends Doacoes{
 		this.sal = sal;
 		this.acucar = acucar;
 	}
+	//Metodos\\
 	public int getArroz() {
 		return arroz;
 	}
@@ -65,8 +68,12 @@ public class Comidas extends Doacoes{
 	}
 	public void imprimirInfo() {
 		System.out.println("*******************Recebimento de Doações****************");
-		System.out.println("Nome do Doador:"+getNome()+"\n"+"Endereco:"+getEndereco()+"\n"+"Idade do Doador:"+getIdade()+"\n"+"Arroz:"+arroz+
-				"\n"+"Feijões:"+feijao+"\n"+"Oleos:"+oleo+"\n"+"Farinhas:"+farinha+"\n"+"Leites:"+leite+"\n"+"Sal:"+sal+"\n"+"Açucar:"+acucar);
+		System.out.println("Nome do Doador:"+getNome()+"\n"+"Endereco:"+getEndereco()+"\n"+"Idade do Doador:"+getIdade()+"\n"+
+		  "Arroz: "+arroz+"\n"+"Feijões: "+feijao+"\n"+"Oleos:"+oleo+"\n"+"Farinhas: "+farinha+"\n"+"Leites: "+leite+"\n"+"Sal: "+sal+
+		  "\n"+"Açucares: "+acucar);
 	}
-	
+	@Override
+	public void intensDefeituosos() {
+		System.out.println("Não aceitamos itens defeituosos e estragados, Presta Atenção!!!!");
+	}
 }

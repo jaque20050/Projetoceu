@@ -2,6 +2,7 @@ package ProjetoCeu;
 
 public class Higiene extends Doacoes {
 	
+	 //Atributos\\
 	private int papelHigienico;
 	private int sabonete;
 	private int shampoo;
@@ -11,8 +12,10 @@ public class Higiene extends Doacoes {
 	private int escovaDentes;
 	private int cremeDental;
 	
+	//Construtor\\
 	public Higiene(String nome, String endereco,int idade, int papelHigienico, int sabonete, int shampoo,int condicionador,
 			int absorventes,int pentes,int escovaDentes,int cremeDental) {
+		
 		super(nome,endereco,idade);
 		this.papelHigienico = papelHigienico;
 		this.sabonete = sabonete;
@@ -22,7 +25,7 @@ public class Higiene extends Doacoes {
 		this.escovaDentes = escovaDentes;
 		this.cremeDental= cremeDental;
 	}
-
+	//Metodos\\
 	public int getPapelHigienico() {
 		return papelHigienico;
 	}
@@ -77,5 +80,8 @@ public class Higiene extends Doacoes {
 		+papelHigienico+"\n"+"Sabonetes:"+sabonete+"\n"+"Shampoos:"+shampoo+"\n"+"Condicionadores:"+condicionador+"\n"+"Absorventes:"+absorventes+
 		"\n"+"Pentes:"+pentes+"\n"+"Escovas de Dentes:"+escovaDentes+"\n"+"Cremes Dentais:"+cremeDental);
 	}
-	
+	@Override
+	public void intensDefeituosos() {
+		System.out.println("Não aceitamos itens defeituosos e estragados, Presta Atenção!!!!");
+	}
 }

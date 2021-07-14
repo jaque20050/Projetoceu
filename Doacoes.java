@@ -1,17 +1,20 @@
 package ProjetoCeu;
 
-public class Doacoes {
+public abstract class Doacoes {
 	
+	//Atributos\\
 	private String nome;
 	private String endereco;
 	private int idade;
 	
+	//Construtor\\//Inicializar os meus atributos\\
 	public Doacoes(String nome,String endereco, int idade) {
 		super();
 		this.nome = nome;
 		this.endereco = endereco;
 		this.idade = idade;
 	}
+	//Metodos\\
 	public String getNome() {
 		return nome;
 	}
@@ -30,5 +33,5 @@ public class Doacoes {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-
+	abstract public void intensDefeituosos();
 }
